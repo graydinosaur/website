@@ -1,6 +1,34 @@
-{% extends "base.html" %}
-{% block content %}
-<link ref="stylesheet" href="{% static "css/style.css" %} ">
-home page
-<a href="{% url "base:logout" %}">logout</a>
-{% endblock content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graydinosaur</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="image-container">
+               <div class="image-caption">Documenten</div>
+ <a href="{% url 'base:logout' %}">Logout</a>
+
+        <div class="caption">
+             <img src="{% static 'images/document.jpg' %}" alt="Logo" background width="120" height="120" id="menu-toggle">
+    </div>
+    <div class="taskbar">
+ <div class="dropup">
+  <button class="dropbtn"> <img src="{% static 'images/start.jpg' %}" alt="Logo" width="90" height="30" id="menu-toggle">
+  </button>
+  <div class="dropup-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> 
+</div>
+
+    </div>
+</body>
+</div>
+    <script src="{% static 'js/script.js' %}"></script>
+</html>
